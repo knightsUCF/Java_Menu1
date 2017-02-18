@@ -25,18 +25,20 @@ public class Part {
 		
 		 
 		// Part (ID : int, desc : String, sellPrice : double)
-		public Part(int ID, String desc, double sellprice) {
-			if (desc == null)
+		public Part(int partID, String partDescription, double partSellPrice) {
+			if (partDescription == null)
 			{
 				System.out.print(DEFAULT_DESCRIPTION);
+				
+				
 			}
 			
 		
 			//Edit the part selling price to make sure it is greater than or equal to zero. 
 			// If the part selling price is invalid use the default sell price (DEFAULT_SELL_PRICE).
 			
-			if ( sellprice < 0) {
-				sellprice = DEFAULT_SELL_PRICE;
+			if ( partSellprice < 0) {
+				partSellprice = DEFAULT_SELL_PRICE;
 			}
 			
 			//The constructor with one parameter for the part ID must use 'this' to call the overloaded constructor
@@ -46,8 +48,20 @@ public class Part {
 			
 			
 			
+			
 		}
-		
+
+		public void setPartID(int partID) {
+			this.partID = partID;
+		}
+
+		public void setPartDescription(String partDescription) {
+			this.partDescription = partDescription;
+		}
+
+		public void setPartSellPrice(double partSellPrice) {
+			this.partSellPrice = partSellPrice;
+		}
 		
 ////////////////////////////////////////////////////////////////////////////////////////
 }
